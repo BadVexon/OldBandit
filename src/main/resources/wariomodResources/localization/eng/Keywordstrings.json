@@ -1,0 +1,140 @@
+[
+  {
+    "PROPER_NAME": "Move",
+    "NAMES": [
+      "move",
+      "moves"
+    ],
+    "DESCRIPTION": "Travel on the Board."
+  },
+  {
+    "PROPER_NAME": "Block Space",
+    "NAMES": [
+      "block space",
+      "block_space",
+      "block spaces",
+      "block_spaces"
+    ],
+    "DESCRIPTION": "Space. Grants #yBlock."
+  },
+  {
+    "PROPER_NAME": "Draw Space",
+    "NAMES": [
+      "draw space",
+      "draw_space",
+      "draw spaces",
+      "draw_spaces"
+    ],
+    "DESCRIPTION": "Space. Draws cards."
+  },
+  {
+    "PROPER_NAME": "Damage Space",
+    "NAMES": [
+      "damage space",
+      "damage_space",
+      "damage spaces",
+      "damage_spaces"
+    ],
+    "DESCRIPTION": "Space. Deals damage to ALL enemies."
+  },
+  {
+    "PROPER_NAME": "Doom Space",
+    "NAMES": [
+      "doom space",
+      "doom_space",
+      "doom spaces",
+      "doom_spaces"
+    ],
+    "DESCRIPTION": "Space. #rKills #ryou."
+  },
+  {
+    "PROPER_NAME": "Frail Space",
+    "NAMES": [
+      "frail space",
+      "frail_space",
+      "frail spaces",
+      "frail_spaces"
+    ],
+    "DESCRIPTION": "Space. Apples #yFrail #rto #ryou."
+  },
+  {
+    "PROPER_NAME": "Go Space",
+    "NAMES": [
+      "go space",
+      "go_space",
+      "go spaces",
+      "go_spaces"
+    ],
+    "DESCRIPTION": "Space. Can't be #yTransformed. Deals damage to ALL enemies when landed on or passed."
+  },
+  {
+    "PROPER_NAME": "Kaboom Space",
+    "NAMES": [
+      "kaboom space",
+      "kaboom_space",
+      "kaboom spaces",
+      "kaboom_spaces"
+    ],
+    "DESCRIPTION": "Space. Adds #yKabooms into your draw and discard piles."
+  },
+  {
+    "PROPER_NAME": "Spike Space",
+    "NAMES": [
+      "spike space",
+      "spike_space",
+      "spike spaces",
+      "spike_spaces"
+    ],
+    "DESCRIPTION": "Space. Deals damage to you."
+  },
+  {
+    "PROPER_NAME": "Strength Space",
+    "NAMES": [
+      "strength space",
+      "strength_space",
+      "strength spaces",
+      "strength_spaces"
+    ],
+    "DESCRIPTION": "Space. Grants #yStrength."
+  },
+  {
+    "PROPER_NAME": "Energy Space",
+    "NAMES": [
+      "energy space",
+      "energy_space",
+      "energy spaces",
+      "energy_spaces"
+    ],
+    "DESCRIPTION": "Space. Grants [E] ."
+  },
+  {
+    "PROPER_NAME": "Weak Space",
+    "NAMES": [
+      "weak space",
+      "weak_space",
+      "weak spaces",
+      "weak_spaces"
+    ],
+    "DESCRIPTION": "Space. Apples #yWeak to enemies."
+  },
+  {
+    "PROPER_NAME": "Vulnerable Space",
+    "NAMES": [
+      "vulnerable space",
+      "vulnerable_space",
+      "vulnerable spaces",
+      "vulnerable_spaces"
+    ],
+    "DESCRIPTION": "Space. Apples #yVulnerable to enemies."
+  },
+  {
+    "PROPER_NAME": "Volcanic Space",
+    "NAMES": [
+      "volcanic space",
+      "volcanic_space",
+      "volcanic spaces",
+      "volcanic_spaces"
+    ],
+    "DESCRIPTION": "Space. Deals damage to a random enemy and copies itself."
+  }
+]

@@ -1,0 +1,137 @@
+{
+  "AdrenalineSquare": {
+    "TEXT": [
+      "gain [E] , draw #b2 cards and Transform this into an Empty Space."
+    ]
+  },
+  "ArtifactSquare": {
+    "TEXT": [
+      "gain #b1 #yArtifact and Transform this into an Empty Space."
+    ]
+  },
+  "BlockSquare": {
+    "TEXT": [
+      "gain #b4 #yBlock and #b",
+      " #yBlock next turn.",
+      "gain #b",
+      " #yBlock."
+    ]
+  },
+  "CardSquare": {
+    "TEXT": [
+      "play a ",
+      " and Transform this into an Empty Space."
+    ]
+  },
+  "DamageSquare": {
+    "TEXT": [
+      "deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "DoomSquare": {
+    "TEXT": [
+      "#rdie."
+    ]
+  },
+  "DrawSquare": {
+    "TEXT": [
+      "When landed upon, draw #b",
+      " cards.",
+      " When #gpassed, draw #b1 card.",
+      " When #gpassed, draw #b"
+    ]
+  },
+  "EmptySquare": {
+    "TEXT": [
+      "does nothing."
+    ]
+  },
+  "EnergySquare": {
+    "TEXT": [
+      "gain [E] ."
+    ]
+  },
+  "FrailSquare": {
+    "TEXT": [
+      "gain #b2 #yFrail."
+    ]
+  },
+  "GhostySquare": {
+    "TEXT": [
+      "gain #b1 #yIntangible and Transform this into an Empty Space."
+    ]
+  },
+  "GoSquare": {
+    "TEXT": [
+      "Cannot be Transformed. When landed upon or #gpassed, deal #b",
+      " damage to ALL enemies and gain #b",
+      " #yStrength and #b",
+      " #yDexterity.",
+      " damage to ALL enemies."
+    ]
+  },
+  "GremlinSquare": {
+    "TEXT": [
+      "summon a #rGremlin into combat and Transform this into an Empty Space."
+    ]
+  },
+  "JailSquare": {
+    "TEXT": [
+      "prevent the next #b3 times you would #yMove."
+    ]
+  },
+  "KaboomSquare": {
+    "TEXT": [
+      "shuffle #b",
+      " #yKaboom into your draw and discard piles."
+    ]
+  },
+  "SeekSquare": {
+    "TEXT": [
+      "put 1 card from your draw pile into your hand and Transform this into an Empty Space."
+    ]
+  },
+  "SlimySquare": {
+    "TEXT": [
+      "shuffle #b",
+      " #rSlimed into your draw and discard piles."
+    ]
+  },
+  "SpikeSquare": {
+    "TEXT": [
+      "take #b",
+      " damage."
+    ]
+  },
+  "StrengthSquare": {
+    "TEXT": [
+      "gain #b1 #yStrength."
+    ]
+  },
+  "StunSquare": {
+    "TEXT": [
+      "Stun a random enemy for #b1 turn and Transform this into an Empty Space."
+    ]
+  },
+  "UpgradeSquare": {
+    "TEXT": [
+      "#yUpgrade a random card in your hand."
+    ]
+  },
+  "VoidSquare": {
+    "TEXT": [
+      "lose [E] ."
+    ]
+  },
+  "VulnerableSquare": {
+    "TEXT": [
+      "apply #b2 #yVulnerable to a random enemy."
+    ]
+  },
+  "WeakSquare": {
+    "TEXT": [
+      "apply #b1 #yWeak to ALL enemies."
+    ]
+  }
+}

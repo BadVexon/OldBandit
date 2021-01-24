@@ -1,0 +1,59 @@
+{
+  "wariomod:TheHat": {
+    "NAME": "The Hat",
+    "FLAVOR": "Of utmost importance.",
+    "DESCRIPTIONS": [
+      "At the start of combat, add a card into your hand that #yRetains and #yMoves up to #b3 Spaces."
+    ]
+  },
+  "wariomod:DoomHat": {
+    "NAME": "Doom Hat",
+    "FLAVOR": "I will incinerate your soul and imprison your mind in eons of pain. Also, your hair smells nice.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. NL At the start of combat, Transform #b4 random Empty Spaces into #yDoom #ySpaces."
+    ]
+  },
+  "wariomod:SuperHat": {
+    "NAME": "Super Hat",
+    "FLAVOR": "Faster than a speeding regular hat.",
+    "DESCRIPTIONS": [
+      "Replaces " ,
+      ".[] NL At the start of combat, add a card into your hand that #yRetains and #yMoves any number of Spaces."
+    ]
+  },
+  "wariomod:SmileyHat": {
+    "NAME": "Smiley Hat",
+    "FLAVOR": ":D",
+    "DESCRIPTIONS": [
+      "At the start of combat, Transform a random Empty Space into a positive Space."
+    ]
+  },
+  "wariomod:AngryHat": {
+    "NAME": "Angry Hat",
+    "FLAVOR": "ARRRRRGH, this conflict is coming to a head.",
+    "DESCRIPTIONS": [
+      "At the start of combat, Transform a random negative Space into an Empty Space."
+    ]
+  },
+  "wariomod:PropellerHat": {
+    "NAME": "Propeller Hat",
+    "FLAVOR": "get it, like u r flying",
+    "DESCRIPTIONS": [
+      "Activate the first positive Space you pass each turn."
+    ]
+  },
+  "wariomod:GlassHat": {
+    "NAME": "Glass Hat",
+    "FLAVOR": "Unbreakable.",
+    "DESCRIPTIONS": [
+      "The Board has #b5 less Spaces."
+    ]
+  },
+  "wariomod:SunglassHat": {
+    "NAME": "Sunglasses Hat",
+    "FLAVOR": "B)",
+    "DESCRIPTIONS": [
+      "The first time a rare Space would fade each combat, prevent it."
+    ]
+  }
+}
