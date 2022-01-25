@@ -1,14 +1,4 @@
 {
-  "AdrenalineSquare": {
-    "TEXT": [
-      "gain [E] , draw #b2 cards and Transform this into an Empty Space."
-    ]
-  },
-  "ArtifactSquare": {
-    "TEXT": [
-      "gain #b1 #yArtifact and Transform this into an Empty Space."
-    ]
-  },
   "BlockSquare": {
     "TEXT": [
       "gain #b4 #yBlock and #b",
@@ -47,16 +37,6 @@
       "does nothing."
     ]
   },
-  "EnergySquare": {
-    "TEXT": [
-      "gain [E] ."
-    ]
-  },
-  "FrailSquare": {
-    "TEXT": [
-      "gain #b2 #yFrail."
-    ]
-  },
   "GhostySquare": {
     "TEXT": [
       "gain #b1 #yIntangible and Transform this into an Empty Space."
@@ -71,11 +51,6 @@
       " damage to ALL enemies."
     ]
   },
-  "GremlinSquare": {
-    "TEXT": [
-      "summon a #rGremlin into combat and Transform this into an Empty Space."
-    ]
-  },
   "JailSquare": {
     "TEXT": [
       "prevent the next #b3 times you would #yMove."
@@ -87,11 +62,6 @@
       " #yKaboom into your draw and discard piles.",
       " #yKaboom into your draw and discard piles and gain #b",
       " #yStrength for this turn."
-    ]
-  },
-  "SeekSquare": {
-    "TEXT": [
-      "put 1 card from your draw pile into your hand and Transform this into an Empty Space."
     ]
   },
   "SlimySquare": {
@@ -111,19 +81,9 @@
       "gain #b1 #yStrength."
     ]
   },
-  "StunSquare": {
-    "TEXT": [
-      "Stun a random enemy for #b1 turn and Transform this into an Empty Space."
-    ]
-  },
   "UpgradeSquare": {
     "TEXT": [
       "#yUpgrade 2 random cards in your hand."
-    ]
-  },
-  "VoidSquare": {
-    "TEXT": [
-      "lose [E] ."
     ]
   },
   "VulnerableSquare": {

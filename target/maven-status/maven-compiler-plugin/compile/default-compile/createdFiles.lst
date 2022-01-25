@@ -4,7 +4,6 @@ theWario\cards\KeyFinisher.class
 theWario\util\MetricsPatches.class
 theWario\powers\EnergizedBombsPower.class
 theWario\squares\UpgradeSquare.class
-theWario\squares\SeekSquare.class
 theWario\cards\SimpleShield.class
 theWario\actions\BigUpgradeChoiceAction.class
 theWario\cards\ImFeelingLucky$1.class
@@ -15,8 +14,6 @@ theWario\actions\BigUpgradeChoiceAction$1.class
 theWario\CardFilter.class
 theWario\cards\TheGrandJourney.class
 theWario\cards\HastyRush.class
-theWario\squares\EnergySquare.class
-theWario\squares\VoidSquare.class
 theWario\BanditBoard$2.class
 theWario\cards\Smackflip.class
 theWario\util\AbstractDrone.class
@@ -28,7 +25,6 @@ theWario\util\EnergyPanelRenderPatch.class
 theWario\cards\Leap.class
 theWario\cards\WipeClean.class
 theWario\cards\SpacialMastery.class
-theWario\cards\PayItForwards.class
 theWario\cards\AbstractWarioCard$1.class
 theWario\squares\GhostySquare.class
 theWario\cards\EmptyMind.class
@@ -40,7 +36,6 @@ theWario\actions\StartNewTurnAction.class
 theWario\util\MetricsPatches$SendPostPatch.class
 theWario\cards\HappyHop.class
 theWario\actions\SummonGremlinAction.class
-theWario\cards\CommuneWithCreator.class
 theWario\powers\BoomFormPower.class
 theWario\cards\Bomblaster.class
 theWario\cards\GodlyGift$1.class
@@ -77,7 +72,6 @@ theWario\cards\Hopshield.class
 theWario\cards\SilenceBombs.class
 theWario\powers\KaboomBigPower.class
 theWario\squares\EmptySquare.class
-theWario\squares\ArtifactSquare.class
 theWario\util\ConfirmationGridCardSelectCallback$Locator.class
 theWario\actions\RecursiveMoveAction.class
 theWario\cards\MassiveParty.class
@@ -89,7 +83,6 @@ theWario\cards\f.class
 theWario\actions\PerformXAction.class
 theWario\powers\GreaterGuardPower.class
 theWario\cards\VeryLongJump.class
-theWario\relics\PropellerHat.class
 theWario\squares\KaboomSquare.class
 theWario\squares\WeakSquare.class
 theWario\cards\Game.class
@@ -99,7 +92,6 @@ theWario\actions\SwappingSpaceAction$1.class
 theWario\actions\TransformSquareAction.class
 theWario\cards\DamnedStrength.class
 theWario\cards\Strike.class
-theWario\squares\StunSquare.class
 theWario\cards\SpikeSlash.class
 theWario\actions\BigUpgradeChoiceAction$2.class
 theWario\cards\NullJump$1.class
@@ -116,7 +108,6 @@ theWario\util\DamageCurvy.class
 theWario\actions\DelayedActionAction.class
 theWario\cards\Bombshield.class
 theWario\actions\GrandJourneyAction.class
-theWario\cards\DisarmingMoves.class
 theWario\cards\PoisonBombs.class
 theWario\cards\RacingSpeed.class
 theWario\cards\SpaceSwap.class
@@ -151,19 +142,17 @@ theWario\CardNoSeen.class
 theWario\util\MetricsPatches$ShouldUploadMetricData.class
 theWario\cards\ChargeForth.class
 theWario\cards\ImFeelingLucky.class
-theWario\squares\FrailSquare.class
 theWario\util\RenderHat.class
 theWario\cards\Sidestep$1.class
 theWario\cards\DiceyMove.class
 theWario\util\CenterGridCardSelectScreen.class
 theWario\cards\Step.class
 theWario\cards\Immortalize.class
-theWario\cards\AwfulLook.class
 theWario\squares\DamageSquare.class
 theWario\relics\TheHat.class
 theWario\powers\DonateDrawPower.class
 theWario\cards\OctoJump.class
-theWario\squares\GremlinSquare.class
+theWario\cards\MagnetBarrier.class
 theWario\cards\SuperHatMove.class
 theWario\cards\AbandonGame.class
 theWario\cards\AbstractWarioCard$3.class
@@ -175,14 +164,12 @@ theWario\powers\TempestBlastsPower.class
 theWario\relics\GlassHat.class
 theWario\cards\Defend.class
 theWario\relics\SmileyHat.class
-theWario\cards\CommuneWithCreator$1.class
 theWario\util\LeerVFX.class
 theWario\actions\ReplayThisAction.class
 theWario\CardIgnore.class
 theWario\TheBandit$Enums.class
 theWario\actions\BigUpgradeAction.class
 theWario\cards\DanceDash.class
-theWario\cards\EndlessBlast.class
 theWario\actions\SwappingSpaceAction.class
 theWario\cards\DeadlyDash.class
 theWario\cards\GodlyGift.class
@@ -197,5 +184,4 @@ theWario\actions\TypingAction.class
 theWario\cards\DoubleDip$1.class
 theWario\cards\HastyBite.class
 theWario\cards\ForbiddenMagic.class
-theWario\squares\AdrenalineSquare.class
 theWario\powers\PoisonBombsPower.class

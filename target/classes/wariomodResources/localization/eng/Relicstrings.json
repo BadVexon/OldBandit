@@ -35,25 +35,11 @@
       "At the start of combat, Transform a random negative Space into an Empty Space."
     ]
   },
-  "wariomod:PropellerHat": {
-    "NAME": "Propeller Hat",
-    "FLAVOR": "get it, like u r flying",
-    "DESCRIPTIONS": [
-      "Activate the first positive Space you pass each turn."
-    ]
-  },
   "wariomod:GlassHat": {
     "NAME": "Glass Hat",
     "FLAVOR": "Unbreakable.",
     "DESCRIPTIONS": [
-      "The Board has #b5 less Spaces."
-    ]
-  },
-  "wariomod:SunglassHat": {
-    "NAME": "Sunglasses Hat",
-    "FLAVOR": "B)",
-    "DESCRIPTIONS": [
-      "The first time a rare Space would fade each combat, prevent it."
+      "The Board has #b4 less Spaces."
     ]
   }
 }

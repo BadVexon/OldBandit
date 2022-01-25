@@ -1,12 +1,9 @@
 package theWario;
 
 import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
-import basemod.ModPanel;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -14,11 +11,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -28,8 +22,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import discord4j.core.DiscordClientBuilder;
-import discord4j.core.GatewayDiscordClient;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -38,13 +30,11 @@ import theWario.relics.*;
 import theWario.util.VampiresBanditEvent;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Properties;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -116,8 +106,6 @@ public class WarioMod implements
     public void receivePostInitialize() {
         BaseMod.addEvent(VampiresBanditEvent.ID, VampiresBanditEvent.class, TheCity.ID);
         theBoard = new BanditBoard();
-
-        client = DiscordClientBuilder.create("OTMyMTQ2NDMxMjE5ODg0MTAy.YeOvAw.Wse-_GnQq6HHM_pDgZXPwc9LE1U").build().login().block();
     }
 
     public static boolean showBanditBoardInScreenUp = false;
@@ -237,8 +225,6 @@ public class WarioMod implements
             }
         }
     }
-
-    public static GatewayDiscordClient client;
 
     public static AbstractRelic returnTrueRandomScreenlessRelic() {
         ArrayList<AbstractRelic> eligibleRelicsList = new ArrayList<>();

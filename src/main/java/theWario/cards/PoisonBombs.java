@@ -1,10 +1,8 @@
 package theWario.cards;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAndDeckAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import org.checkerframework.checker.units.qual.K;
 import theWario.powers.PoisonBombsPower;
 
 public class PoisonBombs extends AbstractWarioCard {
