@@ -1,8 +1,13 @@
 package theWario.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theWario.WarioMod;
+import theWario.actions.WeirdMoveGuyAction;
 import theWario.powers.ImprisonedPower;
+import theWario.squares.AbstractSquare;
+import theWario.squares.JailSquare;
 
 public class SelfImprison extends AbstractWarioCard {
 
@@ -13,8 +18,8 @@ public class SelfImprison extends AbstractWarioCard {
     private static final int BLOCK = 8;
     private static final int UPG_BLOCK = 2;
 
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = -1;
+    private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 1;
 
     public SelfImprison() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
@@ -22,10 +27,22 @@ public class SelfImprison extends AbstractWarioCard {
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, autoWeak(m, 1));
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        applyToEnemy(m, autoWeak(m, magicNumber));
         blck();
-        applyToSelf(new ImprisonedPower(magicNumber));
+        for (AbstractSquare s : WarioMod.theBoard.squareList) {
+            if (s instanceof JailSquare) {
+                addToBot(new WeirdMoveGuyAction(s.hb.cX, s.hb.cY, 0.5F, WarioMod.theBoard.player));
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        WarioMod.theBoard.player.position = 11;
+                    }
+                });
+                applyToSelf(new ImprisonedPower(3));
+            }
+        }
     }
 
     public void upgrade() {

@@ -32,7 +32,7 @@ public class Game extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         int i = theBoard.player.position;
         move(magicNumber);
@@ -66,7 +66,6 @@ public class Game extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

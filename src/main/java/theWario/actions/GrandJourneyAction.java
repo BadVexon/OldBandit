@@ -24,7 +24,7 @@ public class GrandJourneyAction extends AbstractXAction {
     public void update() {
         if (amount > 0) {
             for (int i = 0; i < amount; i++) {
-                AbstractDungeon.actionManager.addToBottom(new MoveAction(1));
+                AbstractDungeon.actionManager.addToBottom(new MoveAction(3));
             }
         }
 

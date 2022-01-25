@@ -21,7 +21,7 @@ public class HappyHop extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
         move(3);
         atb(new DrawCardAction(p, magicNumber));
@@ -37,10 +37,7 @@ public class HappyHop extends AbstractWarioCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            upgradeBlock(1);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBlock(2);
         }
     }
 }

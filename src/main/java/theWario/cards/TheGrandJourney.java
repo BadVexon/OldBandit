@@ -27,7 +27,7 @@ public class TheGrandJourney extends AbstractWarioCard {
         RefundFields.refund.set(this, 1);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
@@ -39,7 +39,7 @@ public class TheGrandJourney extends AbstractWarioCard {
     public ArrayList<Integer> showTileAmounts() {
         ArrayList<Integer> bruh = new ArrayList<>();
         for (int i = 0; i < EnergyPanel.totalCount + magicNumber; i++) {
-            bruh.add(i + 1);
+            bruh.add((i + 1) * 3);
         }
         return bruh;
     }

@@ -13,7 +13,7 @@ public class VeryLongJump extends AbstractWarioCard {
     //stupid intellij stuff ATTACK, ALL_ENEMY, RARE
 
     private static final int DAMAGE = 15;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 5;
 
     private static final int MAGIC = 15;
     private static final int UPG_MAGIC = 3;
@@ -26,7 +26,7 @@ public class VeryLongJump extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         move(magicNumber);
     }
@@ -42,7 +42,6 @@ public class VeryLongJump extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

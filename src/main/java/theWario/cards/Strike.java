@@ -31,7 +31,7 @@ public class Strike extends AbstractWarioCard {
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         move(3);
     }

@@ -18,7 +18,7 @@ public class SilenceBombs extends AbstractWarioCard {
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         if (upgraded)
             atb(new MakeTempCardInDiscardAndDeckAction(new Kaboom()));
         else

@@ -13,10 +13,10 @@ public class DanceDash extends AbstractWarioCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int BLOCK = 2;
+    private static final int BLOCK = 3;
     private static final int UPG_BLOCK = 2;
 
     public DanceDash() {
@@ -26,9 +26,9 @@ public class DanceDash extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (WarioMod.theBoard.shouldRender)move(2);
+        if (WarioMod.theBoard.shouldRender)move(3);
         blck();
         if (WarioMod.theBoard.shouldRender)move(2);
     }
@@ -36,8 +36,8 @@ public class DanceDash extends AbstractWarioCard {
     @Override
     public ArrayList<Integer> showTileAmounts() {
         ArrayList<Integer> bruh = new ArrayList<>();
-        bruh.add(2);
-        bruh.add(4);
+        bruh.add(3);
+        bruh.add(5);
         return bruh;
     }
 

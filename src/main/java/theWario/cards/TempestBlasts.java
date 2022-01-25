@@ -12,11 +12,11 @@ public class TempestBlasts extends AbstractWarioCard {
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
     public TempestBlasts() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         transformEmpty(DamageSquare.class, 2);
         applyToSelf(new TempestBlastsPower(magicNumber));
     }

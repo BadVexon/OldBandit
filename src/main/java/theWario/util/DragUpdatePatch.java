@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theWario.TheBandit;
 import theWario.squares.AbstractSquare;
 
-import static theWario.WarioMod.renderStuff;
 import static theWario.WarioMod.theBoard;
 
 @SpirePatch(
@@ -16,7 +15,7 @@ import static theWario.WarioMod.theBoard;
 )
 public class DragUpdatePatch {
     public static void Prefix(EnergyPanel __instance) {
-        if ((AbstractDungeon.player instanceof TheBandit || renderStuff) && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+        if ((AbstractDungeon.player instanceof TheBandit) && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             for (AbstractSquare s : theBoard.squareList) {
                 s.hb.update();
             }

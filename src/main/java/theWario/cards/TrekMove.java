@@ -37,7 +37,7 @@ public class TrekMove extends AbstractWarioCard {
         return bruhList;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         atb(new TargetMoveAction(magicNumber));
     }
 

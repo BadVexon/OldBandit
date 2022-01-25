@@ -40,7 +40,7 @@ public class HastyBite extends AbstractWarioCard {
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {// 47
             atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.3F));// 48 50
         }

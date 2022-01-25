@@ -108,7 +108,7 @@ public abstract class RazsBoard {
             for (AbstractSquare s : squareList) {
                 if (this.renderSpecificSquare(s)) {
                     s.render(sb);
-                    if (s.hb.hovered) {
+                    if (s.hb.hovered && !(s instanceof EmptySquare)) {
                         String q = s.getBodyText();
                         if (!(s instanceof GoSquare) && !(s instanceof DrawSquare)) {
                             if (s.triggersWhenPassed) {
@@ -229,13 +229,18 @@ public abstract class RazsBoard {
                 }
                 r.position = (r.position + amount) % squareList.size();
                 cursquare = squareList.get(r.position);
-                for (int i = 1; i < count; i++) {
-                    cursquare.onLanded();
+                if (cursquare.ignoreNextTrigger) {
+                    cursquare.ignoreNextTrigger = false;
                 }
-                if (!(cursquare instanceof EmptySquare)) {
-                    cursquare.splat();
+                else {
+                    for (int i = 1; i < count; i++) {
+                        cursquare.onLanded();
+                    }
+                    if (!(cursquare instanceof EmptySquare)) {
+                        cursquare.splat();
+                    }
+                    cursquare.uponLand();
                 }
-                cursquare.uponLand();
 
                 if (amount != 0) {
                     movePieces(amount, (int) cursquare.hb.cX, (int) cursquare.hb.cY, Math.min(amount / 10F, 0.66F), r);

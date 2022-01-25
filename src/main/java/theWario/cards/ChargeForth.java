@@ -20,10 +20,11 @@ public class ChargeForth extends AbstractWarioCard {
     public ChargeForth() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         showTileValue = true;
+        baseBlock = 1;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        if (WarioMod.theBoard.shouldRender) atb(new RecursiveMoveAction());
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        if (WarioMod.theBoard.shouldRender) atb(new RecursiveMoveAction(block));
         if (upgraded) {
             atb(new DrawCardAction(p, 1));
         }
@@ -50,8 +51,7 @@ public class ChargeForth extends AbstractWarioCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBlock(1);
         }
     }
 }

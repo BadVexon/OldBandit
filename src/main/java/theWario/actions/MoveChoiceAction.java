@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import theWario.WarioMod;
 import theWario.squares.AbstractSquare;
 
 import static theWario.WarioMod.theBoard;
@@ -24,6 +25,7 @@ public class MoveChoiceAction implements RenderSubscriber, PostUpdateSubscriber 
 
     public MoveChoiceAction(int range) {
         AbstractDungeon.isScreenUp = true;
+        WarioMod.showBanditBoardInScreenUp = true;
         amount = range;
         BaseMod.subscribe(this);
         this.isHidden = false;
@@ -39,6 +41,7 @@ public class MoveChoiceAction implements RenderSubscriber, PostUpdateSubscriber 
 
     private void close() {
         AbstractDungeon.isScreenUp = false;
+        WarioMod.showBanditBoardInScreenUp = false;
         this.isHidden = true;
         MoveChoiceAction vex = this;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {

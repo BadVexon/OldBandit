@@ -34,7 +34,7 @@ public class SpikeSlash extends AbstractWarioCard {
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new TransformSquareAction(theBoard.getPlayerSquare(), SpikeSquare.class));
         move(1);

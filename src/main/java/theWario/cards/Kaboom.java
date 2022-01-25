@@ -21,7 +21,7 @@ public class Kaboom extends AbstractWarioCard {
         exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.FIRE);
         atb(new DrawCardAction(p, 1));
     }

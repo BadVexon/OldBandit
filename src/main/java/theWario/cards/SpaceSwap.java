@@ -2,7 +2,9 @@ package theWario.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theWario.actions.SetCardTargetCoordinatesAction;
 import theWario.actions.SpaceSwapAction;
 
 public class SpaceSwap extends AbstractWarioCard {
@@ -12,11 +14,12 @@ public class SpaceSwap extends AbstractWarioCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public SpaceSwap() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        att(new SetCardTargetCoordinatesAction(this, Settings.WIDTH / 3, Settings.HEIGHT / 3));
         atb(new SpaceSwapAction());
     }
 
@@ -24,9 +27,6 @@ public class SpaceSwap extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             exhaust = false;
-            ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 3);
-            ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 3);
-            ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

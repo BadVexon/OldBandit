@@ -13,7 +13,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import theWario.WarioMod;
 import theWario.squares.AbstractSquare;
+import theWario.squares.EmptySquare;
 
 import static theWario.WarioMod.theBoard;
 
@@ -30,6 +32,7 @@ public class BigUpgradeChoiceAction implements RenderSubscriber, PostUpdateSubsc
 
     public BigUpgradeChoiceAction() {
         AbstractDungeon.isScreenUp = true;
+        WarioMod.showBanditBoardInScreenUp = true;
         this.origin = new Vector2(theBoard.player.location.x, theBoard.player.location.y);
         BaseMod.subscribe(this);
         this.isHidden = false;
@@ -40,6 +43,7 @@ public class BigUpgradeChoiceAction implements RenderSubscriber, PostUpdateSubsc
 
     private void close() {
         AbstractDungeon.isScreenUp = false;
+        WarioMod.showBanditBoardInScreenUp = false;
         this.isHidden = true;
         BigUpgradeChoiceAction vex = this;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
@@ -59,7 +63,7 @@ public class BigUpgradeChoiceAction implements RenderSubscriber, PostUpdateSubsc
     private void updateTargetMode() {
         this.hoveredSquare = null;
         for (AbstractSquare s : theBoard.squareList) {
-            if ((s.hb.hovered) && !s.triggersWhenPassed) {
+            if ((s.hb.hovered) && !s.triggersWhenPassed && !(s instanceof EmptySquare)) {
                 this.hoveredSquare = s;
                 break;
             }
@@ -69,7 +73,7 @@ public class BigUpgradeChoiceAction implements RenderSubscriber, PostUpdateSubsc
 
 
         if (InputHelper.justClickedLeft || InputHelper.justReleasedClickRight) {
-            if (this.hoveredSquare != null) {
+            if (this.hoveredSquare != null && !(this.hoveredSquare instanceof EmptySquare)) {
                 AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
                     @Override
                     public void update() {

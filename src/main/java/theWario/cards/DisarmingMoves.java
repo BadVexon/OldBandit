@@ -21,7 +21,7 @@ public class DisarmingMoves extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, autoVuln(m, magicNumber));
         applyToEnemy(m, autoWeak(m, magicNumber));
         if (WarioMod.theBoard.shouldRender)move(1);

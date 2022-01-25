@@ -14,12 +14,11 @@ public class DeepDig extends AbstractWarioCard {
     private static final int UPG_MAGIC = 1;
 
     public DeepDig() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, -1));
         if (WarioMod.theBoard.shouldRender)transformEmpty(StrengthSquare.class, magicNumber);
     }

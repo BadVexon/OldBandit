@@ -11,16 +11,16 @@ public class f extends AbstractWarioCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 2;
 
     public f() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseBlock = 9;
+        baseBlock = 10;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         transformAny(DoomSquare.class, 2);
@@ -30,7 +30,7 @@ public class f extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeBlock(2);
+            upgradeBlock(3);
         }
     }
 }

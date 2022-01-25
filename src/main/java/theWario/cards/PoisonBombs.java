@@ -1,8 +1,10 @@
 package theWario.cards;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAndDeckAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import org.checkerframework.checker.units.qual.K;
 import theWario.powers.PoisonBombsPower;
 
 public class PoisonBombs extends AbstractWarioCard {
@@ -13,20 +15,18 @@ public class PoisonBombs extends AbstractWarioCard {
 
     public PoisonBombs() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new MakeTempCardInDrawPileAction(new Kaboom(), 1, true, true));
-        if (upgraded)
-            genBoom(1);
-        applyToSelf(new PoisonBombsPower(3));
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        atb(new MakeTempCardInDiscardAndDeckAction(new Kaboom()));
+        applyToSelf(new PoisonBombsPower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }

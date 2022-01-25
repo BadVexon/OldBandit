@@ -32,7 +32,7 @@ public class OctoJump extends AbstractWarioCard {
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
         move(magicNumber);
     }
@@ -40,8 +40,9 @@ public class OctoJump extends AbstractWarioCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPG_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+            selfRetain = true;
         }
     }
 }

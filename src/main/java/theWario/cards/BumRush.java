@@ -24,13 +24,13 @@ public class BumRush extends AbstractWarioCard {
         isMultiDamage = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
         if (WarioMod.theBoard.shouldRender) atb(new AbstractGameAction() {
             @Override
             public void update() {
-                AbstractSquare s = theBoard.squareList.get(((theBoard.player.position - 4) + theBoard.squareList.size()) % theBoard.squareList.size());
+                AbstractSquare s = theBoard.squareList.get(theBoard.player.position);
                 s.uponLand();
                 if (!(s instanceof EmptySquare))
                     s.splat();

@@ -31,7 +31,7 @@ public class DeadlyDash extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         AbstractCard q = this;
         if (WarioMod.theBoard.shouldRender) atb(new AbstractGameAction() {

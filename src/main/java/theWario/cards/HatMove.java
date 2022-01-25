@@ -2,16 +2,13 @@ package theWario.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AlwaysRetainField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theWario.CardIgnore;
-import theWario.TheBandit;
-import theWario.WarioMod;
+import theWario.actions.SetCardTargetCoordinatesAction;
 import theWario.actions.TargetMoveAction;
 
 import java.util.ArrayList;
-
-import static theWario.WarioMod.renderStuff;
 
 @CardIgnore
 public class HatMove extends AbstractWarioCard {
@@ -44,9 +41,8 @@ public class HatMove extends AbstractWarioCard {
         return bruhList;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!(AbstractDungeon.player instanceof TheBandit) && !WarioMod.renderStuff)
-            renderStuff = true;
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        att(new SetCardTargetCoordinatesAction(this, Settings.WIDTH / 3, Settings.HEIGHT / 3));
         atb(new TargetMoveAction(magicNumber));
     }
 

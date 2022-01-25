@@ -17,7 +17,7 @@ public class Defend extends AbstractWarioCard {
         showTileValue = true;
         tags.add(BaseModCardTags.BASIC_DEFEND);
     }
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
         if (WarioMod.theBoard.shouldRender)move(2);
     }

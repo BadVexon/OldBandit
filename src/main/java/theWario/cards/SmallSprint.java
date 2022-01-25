@@ -13,7 +13,7 @@ public class SmallSprint extends AbstractWarioCard {
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
     private static final int DAMAGE = 3;
-    private static final int UPG_DAMAGE = 1;
+    private static final int UPG_DAMAGE = 2;
 
     private static final int BLOCK = 2;
     private static final int UPG_BLOCK = 1;
@@ -29,7 +29,7 @@ public class SmallSprint extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         move(magicNumber);
         blck();
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_LIGHT);
@@ -47,7 +47,6 @@ public class SmallSprint extends AbstractWarioCard {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
             upgradeBlock(UPG_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

@@ -12,14 +12,14 @@ public class DonateDraw extends AbstractWarioCard {
 
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
 
     public DonateDraw() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         if (WarioMod.theBoard.shouldRender)transformEmpty(DrawSquare.class, magicNumber);
         applyToSelf(new DonateDrawPower(1));
     }
@@ -27,7 +27,9 @@ public class DonateDraw extends AbstractWarioCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

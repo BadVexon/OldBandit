@@ -14,7 +14,7 @@ public class KeyFinisher extends AbstractWarioCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new KeyFinisherPower(1));
     }
 

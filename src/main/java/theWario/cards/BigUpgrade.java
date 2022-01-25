@@ -13,11 +13,11 @@ public class BigUpgrade extends AbstractWarioCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public BigUpgrade() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         if (WarioMod.theBoard.shouldRender) {
             atb(new BigUpgradeAction());
         }
@@ -27,8 +27,8 @@ public class BigUpgrade extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             exhaust = false;
-            ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 3);
-            ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 3);
+            ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
+            ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
             ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

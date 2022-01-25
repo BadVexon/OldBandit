@@ -1,7 +1,11 @@
 package theWario.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theWario.BanditBoard;
+import theWario.WarioMod;
+import theWario.squares.AbstractSquare;
 
 import java.util.ArrayList;
 
@@ -28,21 +32,21 @@ public class Hopshield extends AbstractWarioCard {
     public ArrayList<Integer> showTileAmounts() {
         ArrayList<Integer> bruh = new ArrayList<>();
         bruh.add(magicNumber);
-        bruh.add(magicNumber + 1);
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
+        if (WarioMod.theBoard.getPlayerSquare().goodness == AbstractSquare.GOODNESS.BAD) {
+            blck();
+        }
         move(magicNumber);
-        move(1);
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

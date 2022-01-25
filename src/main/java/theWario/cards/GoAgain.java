@@ -15,7 +15,7 @@ public class GoAgain extends AbstractWarioCard {
         exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         transformEmpty(GoSquare.class);
     }
 

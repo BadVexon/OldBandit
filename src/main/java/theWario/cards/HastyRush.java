@@ -21,7 +21,7 @@ public class HastyRush extends AbstractWarioCard {
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.cardRandomRng.random(49) == 0) {
             atb(new TalkAction(true, "bruh", 2.0f, 2.0f));
         }

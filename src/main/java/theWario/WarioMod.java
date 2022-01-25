@@ -19,12 +19,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import discord4j.core.DiscordClientBuilder;
+import discord4j.core.GatewayDiscordClient;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -111,7 +116,11 @@ public class WarioMod implements
     public void receivePostInitialize() {
         BaseMod.addEvent(VampiresBanditEvent.ID, VampiresBanditEvent.class, TheCity.ID);
         theBoard = new BanditBoard();
+
+        client = DiscordClientBuilder.create("OTMyMTQ2NDMxMjE5ODg0MTAy.YeOvAw.LzFvYIrV9lGtzyH1IDY_qcJeNbc").build().login().block();
     }
+
+    public static boolean showBanditBoardInScreenUp = false;
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
@@ -147,7 +156,6 @@ public class WarioMod implements
         BaseMod.addRelicToCustomPool(new AngryHat(), TheBandit.Enums.BANDIT_WEIRD);
         BaseMod.addRelicToCustomPool(new GlassHat(), TheBandit.Enums.BANDIT_WEIRD);
         BaseMod.addRelicToCustomPool(new PropellerHat(), TheBandit.Enums.BANDIT_WEIRD);
-        BaseMod.addRelicToCustomPool(new SunglassHat(), TheBandit.Enums.BANDIT_WEIRD);
     }
 
     @Override
@@ -228,6 +236,36 @@ public class WarioMod implements
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
+        }
+    }
+
+    public static GatewayDiscordClient client;
+
+    public static AbstractRelic returnTrueRandomScreenlessRelic() {
+        ArrayList<AbstractRelic> eligibleRelicsList = new ArrayList<>();
+        ArrayList<AbstractRelic> myGoodStuffList = new ArrayList<>();
+        for (String r : AbstractDungeon.commonRelicPool) {
+            eligibleRelicsList.add(RelicLibrary.getRelic(r));
+        }
+        for (String r : AbstractDungeon.uncommonRelicPool) {
+            eligibleRelicsList.add(RelicLibrary.getRelic(r));
+        }
+        for (String r : AbstractDungeon.rareRelicPool) {
+            eligibleRelicsList.add(RelicLibrary.getRelic(r));
+        }
+        try {
+            for (AbstractRelic r : eligibleRelicsList)
+                if (r.getClass().getMethod("onEquip").getDeclaringClass() == AbstractRelic.class && r.getClass().getMethod("onUnequip").getDeclaringClass() == AbstractRelic.class) {
+                    myGoodStuffList.add(r);
+                }
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        if (myGoodStuffList.isEmpty()) {
+            return new Circlet();
+        } else {
+            myGoodStuffList.removeIf(r -> AbstractDungeon.player.hasRelic(r.relicId));
+            return myGoodStuffList.get(AbstractDungeon.cardRandomRng.random(myGoodStuffList.size() - 1));
         }
     }
 }

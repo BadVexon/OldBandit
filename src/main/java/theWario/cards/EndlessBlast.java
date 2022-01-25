@@ -20,7 +20,7 @@ public class EndlessBlast extends AbstractWarioCard {
         exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         for (int i = 0; i < magicNumber; i++)
             inputCard(this);

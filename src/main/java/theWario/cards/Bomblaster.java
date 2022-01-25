@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theWario.WarioMod;
+import theWario.powers.KaboomBigPower;
 import theWario.squares.KaboomSquare;
 
 public class Bomblaster extends AbstractWarioCard {
@@ -15,25 +16,20 @@ public class Bomblaster extends AbstractWarioCard {
 
 
     public Bomblaster() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        exhaust = true;
-        cardsToPreview = new Kaboom();
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new MakeTempCardInDrawPileAction(new Kaboom(), 1, true, true));
-        if (WarioMod.theBoard.shouldRender) transformEmpty(KaboomSquare.class, 1);
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        if (WarioMod.theBoard.shouldRender) transformEmpty(KaboomSquare.class);
+        if (WarioMod.theBoard.shouldRender) transformEmpty(KaboomSquare.class);
+        applyToSelf(new KaboomBigPower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
-            ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
-            ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }

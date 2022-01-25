@@ -21,11 +21,10 @@ public class Leap extends AbstractWarioCard {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        exhaust = true;
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         move(magicNumber);
     }

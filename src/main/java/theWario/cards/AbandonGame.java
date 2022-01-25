@@ -15,7 +15,7 @@ public class AbandonGame extends AbstractWarioCard {
         isEthereal = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new AbandonGamePower());
     }
 

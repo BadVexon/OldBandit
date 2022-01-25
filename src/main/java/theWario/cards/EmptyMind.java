@@ -22,7 +22,7 @@ public class EmptyMind extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new EmptyMindPower(magicNumber));
     }
 

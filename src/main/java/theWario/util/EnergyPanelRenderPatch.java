@@ -16,7 +16,7 @@ import static theWario.WarioMod.theBoard;
 )
 public class EnergyPanelRenderPatch {
     public static void Prefix(EnergyPanel __instance, SpriteBatch sb) {
-        if (AbstractDungeon.player instanceof TheBandit && theBoard != null && !AbstractDungeon.isScreenUp) {
+        if (AbstractDungeon.player instanceof TheBandit && theBoard != null && (!AbstractDungeon.isScreenUp || WarioMod.showBanditBoardInScreenUp)) {
             theBoard.render(sb);
         }
     }

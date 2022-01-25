@@ -1,15 +1,13 @@
 package theWario.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theWario.TheBandit;
-import theWario.WarioMod;
+import theWario.actions.SetCardTargetCoordinatesAction;
 import theWario.actions.TargetAnyMoveAction;
 
 import java.util.ArrayList;
 
-import static theWario.WarioMod.renderStuff;
 import static theWario.WarioMod.theBoard;
 
 public class SpacialMastery extends AbstractWarioCard {
@@ -33,9 +31,8 @@ public class SpacialMastery extends AbstractWarioCard {
         return bruhList;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!(AbstractDungeon.player instanceof TheBandit) && !WarioMod.renderStuff)
-            renderStuff = true;
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        att(new SetCardTargetCoordinatesAction(this, Settings.WIDTH / 3, Settings.HEIGHT / 3));
         atb(new TargetAnyMoveAction());
     }
 

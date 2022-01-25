@@ -14,9 +14,9 @@ public class HappyHit extends AbstractWarioCard {
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 2;
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
 
     public HappyHit() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -24,7 +24,7 @@ public class HappyHit extends AbstractWarioCard {
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         int waluigi = magicNumber;
         atb(new AbstractGameAction() {
@@ -51,6 +51,9 @@ public class HappyHit extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
+            upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

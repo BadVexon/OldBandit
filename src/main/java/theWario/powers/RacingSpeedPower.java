@@ -36,7 +36,7 @@ public class RacingSpeedPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void updateDescription() {
-        description = "Whenever you pass Go, gain #b" + amount + " #y Strength and #yDexterity.";
+        description = "Whenever you pass Go, gain #b" + amount + " #yStrength and #yDexterity.";
     }
 
     @Override

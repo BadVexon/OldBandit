@@ -18,7 +18,7 @@ public class TrekTime extends AbstractWarioCard {
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new TrekkingPower(magicNumber));
     }
 

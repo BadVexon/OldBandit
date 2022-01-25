@@ -23,7 +23,7 @@ public class Sidestep extends AbstractWarioCard {
         baseMagicNumber = magicNumber = 5;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         atb(new AbstractGameAction() {
             @Override
             public void update() {

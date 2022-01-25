@@ -9,7 +9,7 @@
   },
   "wariomod:Step": {
     "NAME": "Step",
-    "DESCRIPTION": "wariomod:Move up to 2 Spaces."
+    "DESCRIPTION": "wariomod:Move up to !M! Spaces."
   },
   "wariomod:EndlessBlast": {
     "NAME": "Endless Blast",
@@ -17,12 +17,8 @@
   },
   "wariomod:Leap": {
     "NAME": "Extended Jump",
-    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL wariomod:Move !M!. NL Exhaust."
-  },
-  "wariomod:BodyBlock": {
-    "NAME": "Body Block",
-    "DESCRIPTION": "Gain !B! Block. NL πTransform a random Empty Space into a Block Space. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move !M!.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL wariomod:Move !M!."
   },
   "wariomod:Leapslam": {
     "NAME": "Jumpslam",
@@ -37,36 +33,23 @@
     "NAME": "KABOOM!",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL Exhaust."
   },
-  "wariomod:BoomBoom": {
-    "NAME": "Boom Boom",
-    "DESCRIPTION": "Shuffle 1 *Kaboom into your draw and discard piles.",
-    "UPGRADE_DESCRIPTION": "Shuffle 1 *Kaboom into your draw and discard piles. NL Shuffle 1 *Kaboom into your discard pile."
-  },
-  "wariomod:WhirlwindBurst": {
-    "NAME": "Happy Burst",
-    "DESCRIPTION": "πTransform !M! random Empty Spaces into positive Spaces. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "πTransform !M! random Empty Spaces into positive Spaces. NL Exhaustive !stslib:ex!."
-  },
   "wariomod:DisarmingMoves": {
     "NAME": "Confounding Moves",
     "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !M! Weak. NL wariomod:Move 1. NL wariomod:Move 1."
   },
   "wariomod:Bombshield": {
     "NAME": "Bombshield",
-    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Kaboom into your discard pile. NL wariomod:Move !M!."
+    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Kaboom into your discard pile. Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add 1 *Kaboom into your discard pile. Draw !M! cards."
   },
   "wariomod:SmallSprint": {
     "NAME": "Smol Sprint",
     "DESCRIPTION": "wariomod:Move !M!. NL Gain !B! Block. NL Deal !D! damage."
   },
-  "wariomod:SmackSlam": {
-    "NAME": "Smack Slam",
-    "DESCRIPTION": "Deal !D! damage. NL πTransform a random Empty Space into a wariomod:Damage_Space. NL Exhaust."
-  },
   "wariomod:ChargeForth": {
     "NAME": "Charge Forth",
-    "DESCRIPTION": "wariomod:Move 1. NL If you landed on an Empty Space, repeat this.",
-    "UPGRADE_DESCRIPTION": "wariomod:Move 1. NL If you landed on an Empty Space, repeat this. NL Draw 1 card."
+    "DESCRIPTION": "Gain !B! Block. wariomod:Move 1. NL If you landed on an Empty Space, repeat this.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. wariomod:Move 1. NL If you landed on an Empty Space, repeat this. NL Draw 1 card."
   },
   "wariomod:Game": {
     "NAME": "Game",
@@ -83,15 +66,15 @@
   },
   "wariomod:SimpleShield": {
     "NAME": "Sideways Barrier",
-    "DESCRIPTION": "Gain !B! Block. NL Activate the Space 2 behind you."
+    "DESCRIPTION": "Gain !B! Block. NL Activate the Space you're on."
   },
   "wariomod:DanceDash": {
     "NAME": "Dance Dash",
-    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move 2. NL Gain !B! Block. NL wariomod:Move 2."
+    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move 3. NL Gain !B! Block. NL wariomod:Move 2."
   },
   "wariomod:BumRush": {
     "NAME": "Bum Rush",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Activate the Space 4 behind you."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Activate the Space you're on."
   },
   "wariomod:PayItForwards": {
     "NAME": "Pay It Forwards",
@@ -99,8 +82,7 @@
   },
   "wariomod:Bomblaster": {
     "NAME": "Bomblaster",
-    "DESCRIPTION": "Shuffle 1 *Kaboom into your draw pile. NL πTransform 1 random Empty Space into a wariomod:Kaboom_Space. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle 1 *Kaboom into your draw pile. NL πTransform 1 random Empty Space into a wariomod:Kaboom_Space. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": " πTransform 2 random Empty Spaces into wariomod:Kaboom_Spaces. NL Whenever you land on a wariomod:Kaboom_Space, gain !M! Strength for that turn."
   },
   "wariomod:ThatsNotAll": {
     "NAME": "That's Not All!",
@@ -118,15 +100,11 @@
   },
   "wariomod:DiceyMove": {
     "NAME": "Dicey Move",
-    "DESCRIPTION": "wariomod:Move up to 6 Spaces."
-  },
-  "wariomod:TreasureDig": {
-    "NAME": "Treasure Dig",
-    "DESCRIPTION": "πTransform a random Empty Space into an wariomod:Energy_Space. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Draw !M! cards. NL wariomod:Move up to 6 Spaces."
   },
   "wariomod:DeepDig": {
     "NAME": "Deep Dig",
-    "DESCRIPTION": "Lose 1 Strength. NL πTransform !M! random Empty Spaces into wariomod:Strength_Spaces. NL Exhaust."
+    "DESCRIPTION": "Lose 1 Strength. NL πTransform !M! random Empty Spaces into wariomod:Strength_Spaces."
   },
   "wariomod:f": {
     "NAME": "f",
@@ -134,8 +112,8 @@
   },
   "wariomod:TheGrandJourney": {
     "NAME": "The Grand Journey",
-    "DESCRIPTION": "Retain. NL wariomod:Move 1 X+1 times. NL Refund 1.",
-    "UPGRADE_DESCRIPTION": "Retain. NL wariomod:Move 1 X+2 times. NL Refund 1."
+    "DESCRIPTION": "Retain. NL wariomod:Move 3 X+1 times. NL Refund 1.",
+    "UPGRADE_DESCRIPTION": "Retain. NL wariomod:Move 3 X+2 times. NL Refund 1."
   },
   "wariomod:TrekTime": {
     "NAME": "Trek Time!",
@@ -145,34 +123,23 @@
     "NAME": "Hasty Bite",
     "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL wariomod:Move 3."
   },
-  "wariomod:Purify": {
-    "NAME": "Purify",
-    "DESCRIPTION": "Gain !B! Block. NL πTransform a random negative Space into an Empty Space. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL πTransform a random negative Space into an Empty Space. NL Exhaustive !stslib:ex!."
-  },
   "wariomod:ImFeelingLucky": {
     "NAME": "I'm Feeling Lucky!",
-    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move !M!. NL If you land on a negative Space, πTransform it into a positive Space first."
+    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move !M!. NL If you land on a negative Space, ignore it and gain [E] and !B! Block."
   },
   "wariomod:Immortalize": {
     "NAME": "Immortalize",
-    "DESCRIPTION": "Draw !M! cards. NL πTransform 2 random Empty Spaces into Spaces with those card's effects. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL πTransform 2 random Empty Spaces into Spaces with those card's effects. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Choose 1 of 3 Attacks of any color. NL πTransform !M! random Empty Spaces into Spaces with those card's effects. NL Exhaust."
   },
   "wariomod:WipeClean": {
     "NAME": "Wipe Clean",
-    "DESCRIPTION": "Grave. NL πTransform ALL negative Spaces into Empty Spaces. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "πTransform ALL negative Spaces into Empty Spaces. NL Exhaust."
+    "DESCRIPTION": "πTransform ALL negative Spaces into Empty Spaces. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL πTransform ALL negative Spaces into Empty Spaces. NL Exhaust."
   },
   "wariomod:SpacialMastery": {
     "NAME": "Spacial Mastery",
     "DESCRIPTION": "wariomod:Move any number of Spaces. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "wariomod:Move any number of Spaces."
-  },
-  "wariomod:FabulousPrizes": {
-    "NAME": "Fabulous Prizes",
-    "DESCRIPTION": "Gain !B! Block X times. NL πTransform the next X Spaces into random rare Spaces. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. NL πTransform the next X+1 Spaces into random rare Spaces. NL Exhaust."
   },
   "wariomod:Sidestep": {
     "NAME": "Cheat Death",
@@ -190,10 +157,6 @@
   "wariomod:DeadlyDash": {
     "NAME": "Deadly Dash",
     "DESCRIPTION": "Deal !D! damage. NL wariomod:Move 1. NL If you land on a positive Space, play this again."
-  },
-  "wariomod:Jumpy": {
-    "NAME": "Jumpy!",
-    "DESCRIPTION": "wariomod:Move 0 !M! times. NL Exhaust."
   },
   "wariomod:GoAgain": {
     "NAME": "Go Again",
@@ -214,31 +177,19 @@
   },
   "wariomod:PoisonBombs": {
     "NAME": "Poisoned Bombs",
-    "DESCRIPTION": "Whenever a *Kaboom goes boom, apply 3 Poison to ALL enemies. NL Shuffle 1 *Kaboom into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Whenever a *Kaboom goes boom, apply 3 Poison to ALL enemies. NL Shuffle 1 *Kaboom into your draw and discard piles."
+    "DESCRIPTION": "Whenever a *Kaboom goes boom, apply !M! Poison to ALL enemies. NL Shuffle 1 *Kaboom into your draw and discard piles."
   },
   "wariomod:Enshrine": {
     "NAME": "Enshrine",
-    "DESCRIPTION": "For each card in your hand, πTransform a random Empty Space into a Space that activates that card's effects. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL For each card in your hand, πTransform a random Empty Space into a Space that activates that card's effects."
+    "DESCRIPTION": "Exhaust 1 card in your hand. Transform !M! random Empty Spaces into spaces with its effects. NL Exhaust."
   },
   "wariomod:SelfImprison": {
     "NAME": "Self Imprison",
-    "DESCRIPTION": "Apply 1 Weak. NL Gain !B! Block. NL Prevent the next !M! times you would wariomod:Move."
+    "DESCRIPTION": "Apply !M! Weak. NL Gain !B! Block. NL Travel directly to Jail. Do not pass Go."
   },
   "wariomod:HastyRush": {
     "NAME": "bruh",
     "DESCRIPTION": "Draw !M! cards. NL πTransform 2 random Spaces into wariomod:Doom_Spaces."
-  },
-  "wariomod:DoubleDash": {
-    "NAME": "Double Dash",
-    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move 1. NL Repeat this once.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL wariomod:Move 1. NL Repeat this twice."
-  },
-  "wariomod:Bombtime": {
-    "NAME": "Bomb-time",
-    "DESCRIPTION": "wariomod:Move 5. NL Add X *Kaboom into your discard pile.",
-    "UPGRADE_DESCRIPTION": "wariomod:Move 5. NL Add X+1 *Kaboom into your discard pile."
   },
   "wariomod:NullJump": {
     "NAME": "Null Jump",
@@ -255,8 +206,8 @@
   },
   "wariomod:GodlyGift": {
     "NAME": "Godly Gift",
-    "DESCRIPTION": "Unplayable. NL Startup: πTransform a random Empty Space into a wariomod:Strength_Space.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Startup: πTransform a random negative Space into a wariomod:Strength_Space."
+    "DESCRIPTION": "Unplayable. NL Startup: πTransform a random Empty Space into a wariomod:Intangible_Space.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Startup: πTransform a random negative Space into a wariomod:Intangible_Space."
   },
   "wariomod:KeyFinisher": {
     "NAME": "The Key Finisher",
@@ -266,35 +217,24 @@
     "NAME": "Emptied Mind",
     "DESCRIPTION": "At the end of your turn, if you're on an Empty Space, gain !M! Block."
   },
-  "wariomod:MetalForm": {
-    "NAME": "Fabricate Friend",
-    "DESCRIPTION": "Ethereal. NL Create a Drone on a random Space that wariomod:Moves when you do and activates Space effects for you."
-  },
   "wariomod:SpaceSwap": {
     "NAME": "Space Swap",
     "DESCRIPTION": "Swap two Spaces on the Board. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Swap two Spaces on the Board. NL Exhaustive !stslib:ex!."
+    "UPGRADE_DESCRIPTION": "Swap two Spaces on the Board."
   },
   "wariomod:BigUpgrade": {
     "NAME": "Big Upgrade",
     "DESCRIPTION": "Choose a Space. NL It activates when passed as well as landed upon. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose a Space. NL It activates when passed as well as landed upon. NL Exhaustive !stslib:ex!."
   },
-  "wariomod:CursedSpaces": {
-    "NAME": "Accursed Spaces",
-    "DESCRIPTION": "πTransform 3 random Empty Spaces into a wariomod:Weak_Space, a wariomod:Vulnerable_Space, and a wariomod:Frail_Space. NL Exhaust."
-  },
   "wariomod:Hopshield": {
     "NAME": "Hopshield",
-    "DESCRIPTION": "Gain !B! Block. NL wariomod:Move !M!. NL wariomod:Move 1."
-  },
-  "wariomod:PainedShowdown": {
-    "NAME": "Pained Showdown",
-    "DESCRIPTION": "Apply !M! Poison to ALL enemies. NL πTransform 10 random Spaces into negative Spaces. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL If you're on a negative Space, gain !B! Block again. NL wariomod:Move !M!."
   },
   "wariomod:DonateDraw": {
     "NAME": "Donate Draw",
-    "DESCRIPTION": "πTransform !M! random Empty Spaces into wariomod:Draw_Spaces. NL wariomod:Draw_Spaces draw 1 card when passed."
+    "DESCRIPTION": "πTransform !M! random Empty Space into a wariomod:Draw_Space. NL wariomod:Draw_Spaces draw 1 card when passed.",
+    "UPGRADE_DESCRIPTION": "πTransform !M! random Empty Spaces into wariomod:Draw_Spaces. NL wariomod:Draw_Spaces draw 1 card when passed."
   },
   "wariomod:HatMove": {
     "NAME": "Hat Move",
@@ -304,22 +244,13 @@
     "NAME": "Trek Move",
     "DESCRIPTION": "Ethereal. NL wariomod:Move up to !M! Spaces. NL Exhaust."
   },
-  "wariomod:Amalgamator": {
-    "NAME": "Amalgamator",
-    "DESCRIPTION": "Choose 2 non-Go Spaces. NL πTransform a random Empty Space into a Fused Space with both their effects. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 2 non-Go Spaces. NL πTransform a random Empty Space into a Fused Space with both their effects. NL Exhaustive !stslib:ex!."
-  },
   "wariomod:AwfulLook": {
     "NAME": "Awful Look",
-    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move 1."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL wariomod:Move 1."
   },
   "wariomod:DamnedStrength": {
-    "NAME": "pepega",
+    "NAME": "pog",
     "DESCRIPTION": "Gain !M! Strength. NL πTransform 2 random Spaces into wariomod:Doom_Spaces."
-  },
-  "wariomod:BoomForm": {
-    "NAME": "Boom Form",
-    "DESCRIPTION": "Grave. NL At the end of your turn, shuffle !M! *Kaboom into your draw and discard piles."
   },
   "wariomod:SilenceBombs": {
     "NAME": "Blockbombs",
@@ -328,8 +259,8 @@
   },
   "wariomod:Boomsmack": {
     "NAME": "Boomsmack",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Kaboom into your discard pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Kaboom into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Kaboom into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Kaboom+ into your draw pile."
   },
   "wariomod:SuperHatMove": {
     "NAME": "Super Hat Move",
@@ -338,31 +269,24 @@
   },
   "wariomod:HappyHit": {
     "NAME": "Happy Hit",
-    "DESCRIPTION": "Deal !D! damage. NL Activate the next 2 positive Spaces."
-  },
-  "wariomod:BoomAndDoom": {
-    "NAME": "Doom Boom",
-    "DESCRIPTION": "Upgrade all *Kaboom.",
-    "UPGRADE_DESCRIPTION": "Shuffle 1 *Kaboom into your draw pile. NL Upgrade all *Kaboom."
+    "DESCRIPTION": "Deal !D! damage. NL Activate the next positive Space.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Activate the next 2 positive Spaces."
   },
   "wariomod:OctoJump": {
     "NAME": "Octo Jump",
-    "DESCRIPTION": "Gain !B! Block. NL wariomod:Move !M!. NL Shuffle this card into your draw pile."
-  },
-  "wariomod:DropBash": {
-    "NAME": "Drop Bash",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL wariomod:Move !M!."
+    "DESCRIPTION": "Gain !B! Block. NL wariomod:Move !M!. NL Shuffle this card into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL wariomod:Move !M!. NL Shuffle this card into your draw pile."
   },
   "wariomod:SpikeSlash": {
     "NAME": "Spike Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Transform the space you're on into a wariomod:Spike_Space. NL wariomod:Move 1."
+    "DESCRIPTION": "Deal !D! damage. NL πTransform the space you're on into a wariomod:Spike_Space. NL wariomod:Move 1."
   },
   "wariomod:ForbiddenMagic": {
     "NAME": "Forbidden Magic",
-    "DESCRIPTION": "Apply 2 Weak. NL Apply 2 Vulnerable. NL Exhaust 1 card. NL wariomod:Move 4."
+    "DESCRIPTION": "Apply 2 Weak. NL Apply 2 Vulnerable. NL Exhaust 2 cards. NL wariomod:Move 2."
   },
-  "wariomod:BlastDash": {
-    "NAME": "Blast Dash",
-    "DESCRIPTION": "Deal !D! damage. NL wariomod:Move !M!. NL Add 1 *Kaboom into your discard pile."
+  "wariomod:CommuneWithCreator": {
+    "NAME": "Commune With Creator",
+    "DESCRIPTION": "Thanks for playing for so long! Type in a message and send it to the me (the mod creator), then remove this from your deck and obtain a random Relic."
   }
 }

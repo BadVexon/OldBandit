@@ -15,14 +15,14 @@ public class Goblast extends AbstractWarioCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 9;
 
     public Goblast() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.FIRE);
         if (theBoard.squareList.get(theBoard.player.position) instanceof GoSquare) {
             atb(new GainEnergyAction(1));

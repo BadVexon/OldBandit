@@ -38,7 +38,7 @@ public class SilenceBombsPower extends AbstractPower implements CloneablePowerIn
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof Kaboom) {
             flash();
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(owner, owner, 2));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(owner, owner, amount));
         }
     }
 

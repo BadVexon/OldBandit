@@ -13,7 +13,7 @@ public class ThatsNotAll extends AbstractWarioCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
 
     public ThatsNotAll() {
@@ -21,7 +21,7 @@ public class ThatsNotAll extends AbstractWarioCard {
         baseDamage = DAMAGE;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         if (theBoard.squareList.get(theBoard.player.position).goodness == AbstractSquare.GOODNESS.GOOD) {
             dmg(m,  AbstractGameAction.AttackEffect.BLUNT_HEAVY);

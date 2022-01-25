@@ -17,7 +17,7 @@ public class DamnedStrength extends AbstractWarioCard {
         baseMagicNumber = magicNumber = 2;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, magicNumber));
         if (WarioMod.theBoard.shouldRender)transformAny(DoomSquare.class, 2);
     }

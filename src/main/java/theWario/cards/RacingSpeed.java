@@ -28,7 +28,7 @@ public class RacingSpeed extends AbstractWarioCard {
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new RacingSpeedPower(1));
         move(magicNumber);
     }
@@ -36,7 +36,7 @@ public class RacingSpeed extends AbstractWarioCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeBaseCost(0);
         }
     }
 }

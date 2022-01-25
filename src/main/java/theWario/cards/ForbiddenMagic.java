@@ -13,28 +13,28 @@ public class ForbiddenMagic extends AbstractWarioCard {
     //stupid intellij stuff SKILL, ENEMY, RARE
 
     public ForbiddenMagic() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         showTileValue = true;
     }
 
     @Override
     public ArrayList<Integer> showTileAmounts() {
         ArrayList<Integer> bruh = new ArrayList<>();
-        bruh.add(4);
+        bruh.add(2);
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, autoWeak(m, 2));
         applyToEnemy(m, autoVuln(m, 2));
-        atb(new ExhaustAction(1, false, false, false));
-        move(4);
+        atb(new ExhaustAction(2, false, false, false));
+        move(2);
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
         }
     }
 }

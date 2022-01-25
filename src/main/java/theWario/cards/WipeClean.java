@@ -16,12 +16,12 @@ public class WipeClean extends AbstractWarioCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public WipeClean() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        GraveField.grave.set(this, true);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        //GraveField.grave.set(this, true);
         exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         for (AbstractSquare s : theBoard.squareList) {
             if (s.goodness == AbstractSquare.GOODNESS.BAD) {
                 atb(new TransformSquareAction(s, EmptySquare.class));
@@ -32,7 +32,9 @@ public class WipeClean extends AbstractWarioCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            selfRetain = true;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -23,7 +23,7 @@ public class GodlyGift extends AbstractWarioCard implements StartupCard {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
     }
 
     @Override

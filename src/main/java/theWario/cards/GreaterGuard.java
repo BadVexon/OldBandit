@@ -15,11 +15,11 @@ public class GreaterGuard extends AbstractWarioCard {
     private static final int UPG_MAGIC = 1;
 
     public GreaterGuard() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         transformEmpty(BlockSquare.class, 2);
         applyToSelf(new GreaterGuardPower(magicNumber));
     }

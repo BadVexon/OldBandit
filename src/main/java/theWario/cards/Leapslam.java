@@ -15,7 +15,7 @@ public class Leapslam extends AbstractWarioCard {
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 3;
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 6;
 
     public Leapslam() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
@@ -25,7 +25,7 @@ public class Leapslam extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         move(magicNumber);
     }
@@ -41,7 +41,6 @@ public class Leapslam extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(1);
         }
     }
 }

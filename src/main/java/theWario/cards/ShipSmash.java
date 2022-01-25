@@ -17,12 +17,12 @@ public class ShipSmash extends AbstractWarioCard {
     private static final int UPG_MAGIC = 2;
 
     public ShipSmash() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SMASH);
         applyToSelf(new GhostlyDrainPower(magicNumber));
     }

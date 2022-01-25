@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theWario.actions.TransformSquareAction;
 import theWario.powers.DonateDrawPower;
-import theWario.relics.SunglassHat;
 import theWario.util.AbstractDrone;
 import theWario.util.DamageCurvy;
 import theWario.util.DamageLine;
@@ -40,6 +39,7 @@ public abstract class AbstractSquare {
     protected int stride = 360 / maxLines;
     protected float offset = MathUtils.random(-180.0F, 180.0F);
 
+    public boolean ignoreNextTrigger = false;
 
     public boolean triggersWhenPassed = false;
 
@@ -92,15 +92,7 @@ public abstract class AbstractSquare {
 
     public void uponLand() {
         if (explodeOnUse) {
-            if (AbstractDungeon.player.hasRelic(SunglassHat.ID)) {
-                if (!AbstractDungeon.player.getRelic(SunglassHat.ID).checkTrigger()) {
-                    AbstractDungeon.player.getRelic(SunglassHat.ID).flash();
-                    ((SunglassHat) AbstractDungeon.player.getRelic(SunglassHat.ID)).activatedThisCombat = true;
-                } else {
-                    AbstractDungeon.actionManager.addToTop(new TransformSquareAction(this, EmptySquare.class));
-                }
-            } else
-                AbstractDungeon.actionManager.addToTop(new TransformSquareAction(this, EmptySquare.class));
+            AbstractDungeon.actionManager.addToTop(new TransformSquareAction(this, EmptySquare.class));
         }
         onLanded();
     }

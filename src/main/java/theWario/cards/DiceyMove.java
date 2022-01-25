@@ -1,5 +1,6 @@
 package theWario.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theWario.WarioMod;
@@ -16,9 +17,11 @@ public class DiceyMove extends AbstractWarioCard {
     public DiceyMove() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         showTileValue = true;
+        baseMagicNumber = magicNumber = 2;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
+        atb(new DrawCardAction(magicNumber));
         if (WarioMod.theBoard.shouldRender) atb(new TargetMoveAction(6));
     }
 
@@ -37,7 +40,7 @@ public class DiceyMove extends AbstractWarioCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(1);
         }
     }
 }

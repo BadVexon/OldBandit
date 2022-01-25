@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import theWario.WarioMod;
 import theWario.squares.AbstractSquare;
 
 import static theWario.WarioMod.theBoard;
@@ -26,6 +27,7 @@ public class SwappingSpaceAction implements RenderSubscriber, PostUpdateSubscrib
 
     public SwappingSpaceAction(SpaceSwapAction budf) {
         AbstractDungeon.isScreenUp = true;
+        WarioMod.showBanditBoardInScreenUp = true;
         BaseMod.subscribe(this);
         this.isHidden = false;
         myBuddy = budf;
@@ -33,6 +35,7 @@ public class SwappingSpaceAction implements RenderSubscriber, PostUpdateSubscrib
 
     private void close() {
         AbstractDungeon.isScreenUp = false;
+        WarioMod.showBanditBoardInScreenUp = false;
         this.isHidden = true;
         SwappingSpaceAction vex = this;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {

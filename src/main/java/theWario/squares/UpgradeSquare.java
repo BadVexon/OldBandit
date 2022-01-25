@@ -15,7 +15,9 @@ public class UpgradeSquare extends AbstractSquare {
     }
 
     public void onLanded() {
-        AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
+        for (int i = 0; i < 2; i++) {
+            AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
+        }
     }
 
     public String getBodyText() {

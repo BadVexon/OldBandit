@@ -19,7 +19,7 @@ public class PayItForwards extends AbstractWarioCard {
         exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
         transformEmpty(SpikeSquare.class, 2);
     }

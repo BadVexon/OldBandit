@@ -23,12 +23,12 @@ public class SimpleShield extends AbstractWarioCard {
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                AbstractSquare s = theBoard.squareList.get(((theBoard.player.position - 2) + theBoard.squareList.size()) % theBoard.squareList.size());
+                AbstractSquare s = theBoard.squareList.get(theBoard.player.position);
                 s.uponLand();
                 if (!(s instanceof EmptySquare))
                     s.splat();

@@ -1,6 +1,8 @@
 package theWario.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,11 +29,12 @@ public class ImFeelingLucky extends AbstractWarioCard {
     public ImFeelingLucky() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseBlock = 2;
         baseMagicNumber = magicNumber = MAGIC;
         showTileValue = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         dmg(m,  AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         atb(new AbstractGameAction() {
             @Override
@@ -39,8 +42,11 @@ public class ImFeelingLucky extends AbstractWarioCard {
                 isDone = true;
                 if (!AbstractDungeon.player.hasPower(ImprisonedPower.POWER_ID) && !AbstractDungeon.player.hasPower(AbandonGamePower.POWER_ID)) {
                     AbstractSquare s = theBoard.squareList.get((theBoard.player.position + magicNumber) % theBoard.squareList.size());
-                    if (s.goodness == AbstractSquare.GOODNESS.BAD)
-                        theBoard.transform(s, theBoard.swapSquare(theBoard.getRandomCommonSquare(), s.x, s.y));
+                    if (s.goodness == AbstractSquare.GOODNESS.BAD) {
+                        s.ignoreNextTrigger = true;
+                        att(new GainEnergyAction(1));
+                        att(new GainBlockAction(p, block));
+                    }
                 }
             }
         });
@@ -58,7 +64,7 @@ public class ImFeelingLucky extends AbstractWarioCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeBlock(2);
         }
     }
 }

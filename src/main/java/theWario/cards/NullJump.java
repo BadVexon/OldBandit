@@ -41,7 +41,7 @@ public class NullJump extends AbstractWarioCard {
         return bruh;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void us(AbstractPlayer p, AbstractMonster m) {
         blck();
         dmg(m,  AbstractGameAction.AttackEffect.SMASH);
         int i = theBoard.player.position;
