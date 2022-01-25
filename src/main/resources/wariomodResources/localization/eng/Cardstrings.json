@@ -11,10 +11,6 @@
     "NAME": "Step",
     "DESCRIPTION": "wariomod:Move up to !M! Spaces."
   },
-  "wariomod:EndlessBlast": {
-    "NAME": "Endless Blast",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL πTransform a random Empty Space into a Space with this card's effects. NL Exhaust."
-  },
   "wariomod:Leap": {
     "NAME": "Extended Jump",
     "DESCRIPTION": "Deal !D! damage. NL wariomod:Move !M!.",
@@ -33,14 +29,10 @@
     "NAME": "KABOOM!",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL Exhaust."
   },
-  "wariomod:DisarmingMoves": {
-    "NAME": "Confounding Moves",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !M! Weak. NL wariomod:Move 1. NL wariomod:Move 1."
-  },
   "wariomod:Bombshield": {
     "NAME": "Bombshield",
-    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Kaboom into your discard pile. Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add 1 *Kaboom into your discard pile. Draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Kaboom into your draw and discard piles. Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add 1 *Kaboom into your draw and discard piles. Draw !M! cards."
   },
   "wariomod:SmallSprint": {
     "NAME": "Smol Sprint",
@@ -75,10 +67,6 @@
   "wariomod:BumRush": {
     "NAME": "Bum Rush",
     "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Activate the Space you're on."
-  },
-  "wariomod:PayItForwards": {
-    "NAME": "Pay It Forwards",
-    "DESCRIPTION": "Gain !B! Block. NL πTransform 2 random Empty Spaces into wariomod:Spike_Spaces. NL Exhaust."
   },
   "wariomod:Bomblaster": {
     "NAME": "Bomblaster",
@@ -185,7 +173,7 @@
   },
   "wariomod:SelfImprison": {
     "NAME": "Self Imprison",
-    "DESCRIPTION": "Apply !M! Weak. NL Gain !B! Block. NL Travel directly to Jail. Do not pass Go."
+    "DESCRIPTION": "Apply !M! Weak. NL Gain !B! Block. NL wariomod:Move directly to Jail. Do not pass Go."
   },
   "wariomod:HastyRush": {
     "NAME": "bruh",
@@ -244,10 +232,6 @@
     "NAME": "Trek Move",
     "DESCRIPTION": "Ethereal. NL wariomod:Move up to !M! Spaces. NL Exhaust."
   },
-  "wariomod:AwfulLook": {
-    "NAME": "Awful Look",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL wariomod:Move 1."
-  },
   "wariomod:DamnedStrength": {
     "NAME": "pog",
     "DESCRIPTION": "Gain !M! Strength. NL πTransform 2 random Spaces into wariomod:Doom_Spaces."
@@ -259,8 +243,8 @@
   },
   "wariomod:Boomsmack": {
     "NAME": "Boomsmack",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Kaboom into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Kaboom+ into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Kaboom into your draw pile. NL wariomod:Move 2.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Kaboom+ into your draw pile. NL wariomod:Move 2."
   },
   "wariomod:SuperHatMove": {
     "NAME": "Super Hat Move",
@@ -283,10 +267,14 @@
   },
   "wariomod:ForbiddenMagic": {
     "NAME": "Forbidden Magic",
-    "DESCRIPTION": "Apply 2 Weak. NL Apply 2 Vulnerable. NL Exhaust 2 cards. NL wariomod:Move 2."
+    "DESCRIPTION": "Apply 2 Weak. NL Apply 2 Vulnerable. NL Exhaust 2 cards, then draw 2 cards. NL wariomod:Move 2."
   },
   "wariomod:CommuneWithCreator": {
     "NAME": "Commune With Creator",
     "DESCRIPTION": "Thanks for playing for so long! Type in a message and send it to the me (the mod creator), then remove this from your deck and obtain a random Relic."
+  },
+  "wariomod:MagnetBarrier": {
+    "NAME": "Magnetic Barrier",
+    "DESCRIPTION": "Gain !B! Block, increased by !M! for each Colorless card played this turn."
   }
 }

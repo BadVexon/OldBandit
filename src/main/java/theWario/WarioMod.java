@@ -117,7 +117,7 @@ public class WarioMod implements
         BaseMod.addEvent(VampiresBanditEvent.ID, VampiresBanditEvent.class, TheCity.ID);
         theBoard = new BanditBoard();
 
-        client = DiscordClientBuilder.create("OTMyMTQ2NDMxMjE5ODg0MTAy.YeOvAw.LzFvYIrV9lGtzyH1IDY_qcJeNbc").build().login().block();
+        client = DiscordClientBuilder.create("OTMyMTQ2NDMxMjE5ODg0MTAy.YeOvAw.Wse-_GnQq6HHM_pDgZXPwc9LE1U").build().login().block();
     }
 
     public static boolean showBanditBoardInScreenUp = false;
@@ -155,7 +155,6 @@ public class WarioMod implements
         BaseMod.addRelicToCustomPool(new SmileyHat(), TheBandit.Enums.BANDIT_WEIRD);
         BaseMod.addRelicToCustomPool(new AngryHat(), TheBandit.Enums.BANDIT_WEIRD);
         BaseMod.addRelicToCustomPool(new GlassHat(), TheBandit.Enums.BANDIT_WEIRD);
-        BaseMod.addRelicToCustomPool(new PropellerHat(), TheBandit.Enums.BANDIT_WEIRD);
     }
 
     @Override

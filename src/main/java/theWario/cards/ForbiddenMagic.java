@@ -1,5 +1,6 @@
 package theWario.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,6 +29,7 @@ public class ForbiddenMagic extends AbstractWarioCard {
         applyToEnemy(m, autoWeak(m, 2));
         applyToEnemy(m, autoVuln(m, 2));
         atb(new ExhaustAction(2, false, false, false));
+        atb(new DrawCardAction(2));
         move(2);
     }
 

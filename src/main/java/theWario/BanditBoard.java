@@ -151,10 +151,7 @@ public class BanditBoard extends RazsBoard {
     public Class<? extends AbstractSquare> getRandomBadSquare(Random rng) {
         ArrayList<Class<? extends AbstractSquare>> list = new ArrayList<>();
         list.add(SpikeSquare.class);
-        list.add(VoidSquare.class);
         list.add(SlimySquare.class);
-        list.add(FrailSquare.class);
-        //list.add(GremlinSquare.class);
         return list.get(rng.random(list.size() - 1));
     }
 

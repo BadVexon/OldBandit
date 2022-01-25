@@ -58,16 +58,6 @@
     "DESCRIPTION": "Space. #rKills #ryou."
   },
   {
-    "PROPER_NAME": "Frail Space",
-    "NAMES": [
-      "frail space",
-      "frail_space",
-      "frail spaces",
-      "frail_spaces"
-    ],
-    "DESCRIPTION": "Space. Apples #yFrail #rto #ryou."
-  },
-  {
     "PROPER_NAME": "Go Space",
     "NAMES": [
       "go space",
@@ -88,26 +78,6 @@
     "DESCRIPTION": "Space. Adds #yKabooms into your draw and discard piles."
   },
   {
-    "PROPER_NAME": "Spike Space",
-    "NAMES": [
-      "spike space",
-      "spike_space",
-      "spike spaces",
-      "spike_spaces"
-    ],
-    "DESCRIPTION": "Space. Deals damage to you."
-  },
-  {
-    "PROPER_NAME": "Artifact Space",
-    "NAMES": [
-      "artifact space",
-      "artifact_space",
-      "artifact spaces",
-      "artifact_spaces"
-    ],
-    "DESCRIPTION": "Space. Grants resistance to the next debuff, then fades."
-  },
-  {
     "PROPER_NAME": "Strength Space",
     "NAMES": [
       "strength space",
@@ -116,45 +86,5 @@
       "strength_spaces"
     ],
     "DESCRIPTION": "Space. Grants #yStrength."
-  },
-  {
-    "PROPER_NAME": "Energy Space",
-    "NAMES": [
-      "energy space",
-      "energy_space",
-      "energy spaces",
-      "energy_spaces"
-    ],
-    "DESCRIPTION": "Space. Grants [E] ."
-  },
-  {
-    "PROPER_NAME": "Weak Space",
-    "NAMES": [
-      "weak space",
-      "weak_space",
-      "weak spaces",
-      "weak_spaces"
-    ],
-    "DESCRIPTION": "Space. Apples #yWeak to enemies."
-  },
-  {
-    "PROPER_NAME": "Vulnerable Space",
-    "NAMES": [
-      "vulnerable space",
-      "vulnerable_space",
-      "vulnerable spaces",
-      "vulnerable_spaces"
-    ],
-    "DESCRIPTION": "Space. Apples #yVulnerable to enemies."
-  },
-  {
-    "PROPER_NAME": "Volcanic Space",
-    "NAMES": [
-      "volcanic space",
-      "volcanic_space",
-      "volcanic spaces",
-      "volcanic_spaces"
-    ],
-    "DESCRIPTION": "Space. Deals damage to a random enemy and copies itself."
   }
 ]

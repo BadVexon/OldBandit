@@ -233,7 +233,8 @@
   },
   "wariomod:DonateDraw": {
     "NAME": "Donate Draw",
-    "DESCRIPTION": "πTransform !M! random Empty Spaces into wariomod:Draw_Spaces. NL wariomod:Draw_Spaces draw 1 card when passed."
+    "DESCRIPTION": "πTransform !M! random Empty Space into a wariomod:Draw_Space. NL wariomod:Draw_Spaces draw 1 card when passed.",
+    "UPGRADE_DESCRIPTION": "πTransform !M! random Empty Spaces into wariomod:Draw_Spaces. NL wariomod:Draw_Spaces draw 1 card when passed."
   },
   "wariomod:HatMove": {
     "NAME": "Hat Move",
